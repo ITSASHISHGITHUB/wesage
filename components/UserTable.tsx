@@ -25,10 +25,12 @@ const UserTable: React.FC = () => {
     setPage(newPage);
   };
 
-  const handleChangeRowsPerPage = (event: any) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
+
+  const handleChangeRowsPerPage = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setRowsPerPage(Number(event.target.value));
     setPage(0);
   };
+  
 
   const handleEditClick = (user: User) => {
     setCurrentUser(user);

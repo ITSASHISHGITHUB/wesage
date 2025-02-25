@@ -1,7 +1,7 @@
 import React from 'react';
 import UserForm from './UserForm';
 import { UserFormData } from '../types/types';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent } from '@mui/material';
 import styles from './UserModal.module.scss';
 
 interface UserModalProps {
@@ -19,7 +19,6 @@ const UserModal: React.FC<UserModalProps> = ({ open, title, initialData, onClose
       <DialogContent className={styles.modalBody}>
         <UserForm initialData={initialData} onSubmit={onSubmit} onCancel={onClose} />
       </DialogContent>
-     
     </Dialog>
   );
 };
