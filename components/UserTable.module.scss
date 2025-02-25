@@ -1,0 +1,72 @@
+.tableContainer {
+    margin: 20px 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .actionsColumn {
+    text-align: center;
+  }
+  
+  .editButton {
+    background-color: #007bff;
+    color: white;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  .noData {
+    text-align: center;
+    font-weight: bold;
+    color: #888;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+  }
+  
+  .rowsPerPageContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .rowsPerPageSelect {
+    min-width: 80px;
+ 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .pageInfo {
+    font-weight: bold;
+  }
+  
+  .pageButtons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .pageButton {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    &:disabled {
+      background-color: #ccc;
+    }
+    &:hover:not(:disabled) {
+      background-color: #0056b3;
+    }
+  }
+  
