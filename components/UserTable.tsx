@@ -13,6 +13,8 @@ import Button from '@mui/material/Button';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import styles from './UserTable.module.scss';
+import { SelectChangeEvent } from "@mui/material";
+
 
 const UserTable: React.FC = () => {
   const { users, updateUser } = useUserContext();
@@ -26,10 +28,12 @@ const UserTable: React.FC = () => {
   };
 
 
-  const handleChangeRowsPerPage = (event: React.ChangeEvent<{ value: unknown }>) => {
+
+  const handleChangeRowsPerPage = (event: SelectChangeEvent<number>) => {
     setRowsPerPage(Number(event.target.value));
     setPage(0);
   };
+  
   
 
   const handleEditClick = (user: User) => {
